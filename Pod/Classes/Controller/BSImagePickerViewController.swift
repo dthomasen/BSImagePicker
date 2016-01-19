@@ -30,8 +30,8 @@ Use settings or buttons to customize it to your needs.
 public final class BSImagePickerViewController : UINavigationController, BSImagePickerSettings {
     private let settings = Settings()
     
-    private var doneBarButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: nil, action: nil)
-    private var cancelBarButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: nil, action: nil)
+    private var doneBarButton: UIBarButtonItem = UIBarButtonItem(title: "Færdig", style: .Done, target: nil, action: nil)
+    private var cancelBarButton: UIBarButtonItem = UIBarButtonItem(title: "Anuller", style: .Plain, target: nil, action: nil)
     private let albumTitleView: AlbumTitleView = bundle.loadNibNamed("AlbumTitleView", owner: nil, options: nil).first as! AlbumTitleView
     
     static let bundle: NSBundle = NSBundle(path: NSBundle(forClass: PhotosViewController.self).pathForResource("BSImagePicker", ofType: "bundle")!)!
